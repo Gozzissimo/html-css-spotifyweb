@@ -1,3 +1,4 @@
+/* reset */
 * {
     margin: 0;
     border: 0;
@@ -7,5 +8,50 @@
 html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
 }
+
+/* general */
+.flex {
+    display: flex;
+}
+
+/* header */
+
+.container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+header {
+    width: 250px;
+    height: 100%;
+    background-color: red;
+}
+
+.call-to-action {
+    height: 100px;
+    width: calc(100% - 250px);
+    background-color: rgba(48, 129, 129, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+main {
+    width: calc(100% - 250px);
+    height: 100%;
+    background-color: khaki;
+    padding-top: 120px;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}  
