@@ -8,7 +8,6 @@
 html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
-    color: var(--light-grey);
 }
 
 /* general */
@@ -35,7 +34,27 @@ li {
     list-style: none;
 }
 
-/* header */
+/* call to action */
+.call-to-action-bar {
+    height: 100px;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    justify-content: right;
+    align-items: center;
+    background-color: var(--clear);
+}
+
+.call-to-action-bar a {
+    display: block;
+    margin-right: 10px;
+    padding: 20px 50px;
+    border: 2px solid var(--white);
+    border-radius: 30px;
+    color: var(--white);
+}
 
 .container {
     width: 100%;
@@ -43,27 +62,17 @@ li {
     overflow-y: auto;
 }
 
+/* header */
 header {
     width: 250px;
     height: 100%;
     background-color: var(--black);
 }
 
-.call-to-action-bar {
-    height: 100px;
-    width: calc(100% - 250px);
-    background-color: rgba(48, 129, 129, 0.5);
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    background-color: var(--clear);
-}
 
 main {
     width: calc(100% - 250px);
     height: 100%;
-    background-color: khaki;
     padding-top: 120px;
     background-color: var(--dark-blue);
 }
@@ -71,7 +80,6 @@ main {
 nav {
     height: 100px;
     width: 100%;
-    background-color: grey;
     position: fixed;
     bottom: 0;
     left: 0;
