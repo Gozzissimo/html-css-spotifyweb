@@ -96,11 +96,13 @@ nav {
     width: 100%;
     height: calc(100% - var(--nav-bottom-height));
     font-weight: bold;
+    overflow: hidden;
 }
 
 .nav-bottom {
     width: 100%;
     height: var(--nav-bottom-height);
+    background-color: darkcyan;
 }
 
 /* logo */
@@ -132,20 +134,18 @@ nav {
 }
 
 /* playlist */
-.playlist-container {
-    height: 70%;
-    overflow: hidden;
-    background-color: green;
-}
-
 .playlist {
-    height: 100%;
+    height: calc(100% - 290px);
     overflow-y: auto;
 }
 
-.playlist-container h2 {
-    font-size: 1em;
+.add-playlist h2 {
+    font-size: 0.8em;
     padding: 5px 0
+}
+
+.add-playlist {
+    padding-bottom: 10px;
 }
 
 .add-playlist i {
@@ -156,6 +156,11 @@ nav {
 
 .add-playlist-text {
     font-size: 0.9em;
+}
+
+.playlist li {
+    padding: 10px 0;
+    font-size: 0.8em;
 }
 
 /* main */
@@ -182,10 +187,11 @@ main {
 .call-to-action-bar a {
     display: block;
     margin-right: 30px;
-    padding: 15px 50px;
+    padding: 15px 45px;
     border: 2px solid var(--white);
     color: var(--white);
     border-radius: 30px;
+    font-size: 0.8em;
 }
 
 .menu-inline {
