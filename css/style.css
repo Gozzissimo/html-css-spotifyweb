@@ -38,6 +38,10 @@ html {
     display: flex;
 }
 
+.flex.center {
+    align-items: center;
+}
+
 .clearfix::after {
     content: '';
     display: table;
@@ -46,10 +50,19 @@ html {
 
 a {
     text-decoration: none;
+    color: var(--a-color);
 }
 
 ul {
     list-style: none;
+}
+
+.menu-vertical {
+    padding-left: 0;
+}
+
+.menu-inline li {
+    display: inline-block;
 }
 
 .float {
@@ -70,27 +83,86 @@ ul {
 }
 
 /* nav */
+/* general */
 nav {
     width: var(--nav-md-width-large);
     height: 100%;
     min-height: var(--nav-min-height);
     background-color: var(--black);
+    padding-left: 20px;
 }
 
 .nav-top {
     width: 100%;
     height: calc(100% - var(--nav-bottom-height));
+    font-weight: bold;
 }
+
 .nav-bottom {
     width: 100%;
     height: var(--nav-bottom-height);
+}
+
+/* logo */
+.logo {
+    height: var(--call-to-action-height);
+}
+
+.logo-img {
+    height: 100%;
+    width: 65%;
+}
+
+/* nav-menu */
+.nav-menu {
+    padding-bottom: 10px;
+}
+
+.nav-menu a {
+    padding-bottom: 5px;
+}
+
+.nav-menu img {
+    width: 35px;
+    padding-right: 5px;
+}
+
+.nav-menu-text {
+    font-size: 0.8em;
+}
+
+/* playlist */
+.playlist-container {
+    height: 70%;
+    overflow: hidden;
+    background-color: green;
+}
+
+.playlist {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.playlist-container h2 {
+    font-size: 1em;
+    padding: 5px 0
+}
+
+.add-playlist i {
+    font-size: 2.5em;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.add-playlist-text {
+    font-size: 0.9em;
 }
 
 /* main */
 main {
     width: calc(100% - var(--nav-md-width-large));
     height: 100%;
-    padding: var(--call-to-action-height) 20px;
+    padding: var(--call-to-action-height) 20px 20px;
     overflow: auto;
     background-color: var(--dark-blue);
 }
@@ -119,9 +191,6 @@ main {
 .menu-inline {
     text-align: center;
 }
-.menu-inline li {
-    display: inline-block;
-}
 
 .menu-inline li a {
     display: block;
@@ -141,13 +210,13 @@ footer {
 }  
 
 @media screen and (max-width: 600px) {
-  .main-nav {
-    width: var(--main-nav-xs-width-large);
-  }
-  .main-content {
-    width: calc(100% - var(--main-nav-xs-width-large));
-  }
-  .main-call-to-action {
-    width: calc( 100% - var(--main-nav-xs-width-large));
-  }
+    nav {
+        width: var(--nav-xs-width-large);
+    }
+    main {
+        width: calc(100% - var(--nav-xs-width-large));
+    }
+    .call-to-action-bar {
+        width: calc( 100% - var(--nav-xs-width-large));
+    }
 }
