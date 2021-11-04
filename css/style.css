@@ -2,12 +2,10 @@
 /* colors */
 :root {
     --font-color: rgba(255, 255, 255, 0.4);
-    --a-color: rgba(255, 255, 255, 0.4);
     --a-hover-color: white;
     --white: #ffffff;
     --green: #1DB954;
     --black: #000000;
-    --light-grey: #B2B2B2;
     --grey: #313131;
     --dark-blue: #0f1016;
     --clear: rgba(0, 0, 0, 0.5);
@@ -32,14 +30,11 @@ html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
     color: var(--font-color);
+    font-weight: bold;
 }
 
 .flex {
     display: flex;
-}
-
-.flex.center {
-    align-items: center;
 }
 
 .clearfix::after {
@@ -50,7 +45,7 @@ html {
 
 a {
     text-decoration: none;
-    color: var(--a-color);
+    color: var(--font-color);
 }
 
 ul {
@@ -95,14 +90,13 @@ nav {
 .nav-top {
     width: 100%;
     height: calc(100% - var(--nav-bottom-height));
-    font-weight: bold;
     overflow: hidden;
 }
 
 .nav-bottom {
     width: 100%;
     height: var(--nav-bottom-height);
-    background-color: darkcyan;
+    padding-right: 20px;
 }
 
 /* logo */
@@ -120,13 +114,18 @@ nav {
     padding-bottom: 10px;
 }
 
-.nav-menu a {
+.nav-menu li {
     padding-bottom: 5px;
 }
 
-.nav-menu img {
+.nav-menu-img {
     width: 35px;
     padding-right: 5px;
+    vertical-align: middle;
+}
+
+.grey {
+    fill: var(--font-color);
 }
 
 .nav-menu-text {
@@ -141,7 +140,8 @@ nav {
 
 .add-playlist h2 {
     font-size: 0.8em;
-    padding: 5px 0
+    padding: 5px 0;
+    color: var(--white);
 }
 
 .add-playlist {
@@ -161,6 +161,35 @@ nav {
 .playlist li {
     padding: 10px 0;
     font-size: 0.8em;
+}
+
+/* nav-bottom */
+.call-to-install {
+    padding: 5px 0 10px;
+    border-bottom: 1px solid var(--font-color);
+}
+
+.call-to-install .install-text{
+    font-size: 0.8em;
+    padding-left: 10px;
+}
+
+.call-to-install svg {
+    width: 1em;
+    vertical-align: middle;
+    background-color: fon;
+}
+
+.user {
+    padding-top: 10px;
+    color: var(--white);
+}
+
+.user svg{
+    width: 25px;
+    vertical-align: middle;
+    background-color: var(--font-color);
+    border-radius: 50%;
 }
 
 /* main */
@@ -205,7 +234,6 @@ main {
     padding: 20px 10px;
     font-size: 0.8em;
     color: var(--a-color);
-    font-weight: bold;
 }
 
 /* footer */
@@ -218,7 +246,26 @@ footer {
 @media screen and (max-width: 600px) {
     nav {
         width: var(--nav-xs-width-large);
+        padding-left: 0;
+        text-align: center;
     }
+    .logo-img,
+    .nav-menu-text,
+    .add-playlist,
+    .playlist,
+    .install-text,
+    .user-text {
+        display: none;
+        text-align: center;
+    }
+    .call-to-install {
+        border: 0;
+        text-align: center;
+    }
+    .nav-bottom {
+        padding-right: 0;
+    }
+
     main {
         width: calc(100% - var(--nav-xs-width-large));
     }
