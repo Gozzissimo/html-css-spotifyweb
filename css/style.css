@@ -278,16 +278,21 @@ main {
 }
 
 .tracklist-carousel {
-    justify-content: space-between;
     padding-bottom: 80px;
 }
 
 .album {
     padding: 25px 10px 0;
+    max-width: 280px;
 }
 
 .album-img {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.artists .album-img {
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .album-img img{
