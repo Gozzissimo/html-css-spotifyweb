@@ -322,6 +322,26 @@ footer {
 
 
 /* responsive */
+
+    /* max-width 1100px */
+@media screen and (max-width: 1100px) {
+    .tracklist-carousel {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .album {
+        min-width: 98px;
+        width: calc(100% / 4);
+    }
+}
+
+/* max-width 700px */
+@media screen and (max-width: 700px) {
+    .album {
+        width: calc(100% / 2);
+    }
+}
+
 /* max-width 600px */
 @media screen and (max-width: 600px) {
     nav {
@@ -371,17 +391,4 @@ footer {
     }
 }
 
-/* max-width 700px */
-@media screen and (max-width: 700px) {
 
-}
-
-    /* max-width 1100px */
-@media screen and (max-width: 1100px) {
-    .tracklist-carousel {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .album {
-    }
-}
