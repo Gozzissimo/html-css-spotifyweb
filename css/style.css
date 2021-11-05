@@ -284,7 +284,6 @@ main {
 
 .album {
     padding: 25px 10px 0;
-    max-width: 198px;
 }
 
 .album-img {
@@ -330,6 +329,7 @@ footer {
         justify-content: flex-start;
     }
     .album {
+        max-width: 198px;
         min-width: 98px;
         width: calc(100% / 4);
     }
