@@ -233,6 +233,7 @@ main {
     justify-content: right;
     align-items: center;
     background-color: var(--clear);
+    z-index: 1;
 }
 
 .call-to-action-bar a {
@@ -284,12 +285,33 @@ main {
 
 .album {
     padding: 25px 10px 0;
-    max-width: 280px;
-    width: calc(100% / 2)
+    width: calc(100% / 6);
+    text-transform: capitalize;
 }
 
 .album-img {
     margin-bottom: 20px;
+    position: relative;
+}
+
+.album .play-button {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: var(--a-hover-color);
+}
+
+.album-img:hover .play-button {
+    display: flex;
+    cursor: pointer;
 }
 
 .artists .album-img {
