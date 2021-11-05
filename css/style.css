@@ -17,6 +17,7 @@
     --nav-bottom-height: 80px;
     --call-to-action-height: 100px;
     --footer-height: 100px;
+    --playlist-remaining-height: 290px;
 }
     
 /* reset */
@@ -151,7 +152,7 @@ nav {
 
 /* playlist */
 .playlist {
-    height: calc(100% - 290px);
+    height: calc(100% - var(--playlist-remaining-height));
     overflow-y: auto;
     padding-left: 20px;
 }
@@ -284,6 +285,7 @@ main {
 .album {
     padding: 25px 10px 0;
     max-width: 280px;
+    width: calc(100% / 2)
 }
 
 .album-img {
