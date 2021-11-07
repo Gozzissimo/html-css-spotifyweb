@@ -352,7 +352,7 @@ footer {
 .track,
 .options {
     width: var(--nav-md-width-large);
-    padding: 20px 5px;
+    margin: 20px 5px;
 }
 
 .track,
@@ -363,24 +363,27 @@ footer {
 
 .small-icon {
     font-size: 1.2em;
-    padding-left: 20px;
+    margin: 0 10px;
 }
 
 .options .small-icon a {
     color: var(--white);
 }
 
-/* track */
-.track {
-    background-color: red;
+.hr-bar {
+    height: 3px ;
+    background-color: var(--font-color);
+    border-radius: 3px;
 }
+
+/* track */
 
 .track-image img {
     width: 50px;
 }
 
 .track-info {
-    padding-left: 5px;
+    margin-left: 5px;
 }
 
 .track-info .title {
@@ -393,21 +396,28 @@ footer {
 }
 
 
-
 /* player */
 .player {
-    width: 40%;
+    width: calc(100% - calc(var(--nav-md-width-large) * 2));
+    flex-direction: column;
+    justify-content: center;
     background-color: blue;
+    min-width: ;
+}
+
+.bottom-player .hr-bar {
+    width: 70%;
 }
 
 
 /* options */
-.options {
-    background-color: darkcyan;
-}
 
 .volume {
-    
+    margin-left: 10px;
+    width: 100px;
+    height: 3px ;
+    background-color: var(--font-color);
+    border-radius: 3px;
 }
 
 
