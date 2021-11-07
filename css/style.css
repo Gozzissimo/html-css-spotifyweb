@@ -413,6 +413,7 @@ footer {
 
 .upper-player {
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .upper-player .small-icon {
