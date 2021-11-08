@@ -424,8 +424,13 @@ footer {
     color: var(--white);
 }
 
+.bottom-player {
+    width: 70%;
+    align-items: center;
+}
+
 .bottom-player .hr-bar {
-    /* AIUTO PER CREAZIONE, WIDTH NON PUò ESSERE FISSA */
+    width: 100%;
 }
 
 .play.small-icon {
